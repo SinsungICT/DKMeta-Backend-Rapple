@@ -64,7 +64,7 @@ async raffle(id: number, adminId: string) {
 
     const awardLogsDraft = awards
       .map((award) => { // 경품 선정
-        const winUserIds = getUniqueRandomItems( // 당첨자 선정
+        const winUserIds = getUniqueRandomItems( // 당첨자 선정(random.ts에서 불러와서 실행)
           joinUserIds, // 참여자 ID들
           award.allowedCount, // 경품 당첨 수
         );
